@@ -1,0 +1,74 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    border: 2px solid black;
+    margin: 5px;
+    padding: 20px 50px;
+}
+header{
+    display: flex;
+    margin: 1% 2%;
+    align-items: center;
+}
+.img{
+    margin-right: 8%;
+}
+#avatar-img{
+    width: 250px;
+    border: 1px solid rgb(154, 152, 152);
+    border-radius: 50%;
+}
+#git-link{
+    margin-left: 22%;
+}
+.profile h2{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+h4{
+    font-size: 16px;
+}
+.card-title{
+    color: rgb(2, 131, 182);
+    font-size: 30px;
+    font-weight: 400;
+}
+.card{
+    border: 2px solid black;
+    border-radius: 2px;
+    margin: 15px 0px;
+}
+.card-text{
+    color: black;
+    font-weight: 500;
+}
+.btn-primary{
+    font-weight: 500;
+}
+.pagination-nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nav-button{
+    display: flex;
+    justify-content: space-evenly;
+}
+.nav-button button{
+    background-color:white;
+    text-transform: capitalize;
+    color: grey;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid gray;
+    border-radius: 50px 50px 50px 50px;
+    padding: 5px 20px;
+
+}
+.nav-button .newer{
+    color: blue;
+}
+
