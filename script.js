@@ -1,20 +1,23 @@
 //profile fetching from api goes here
-const apiUrl = "https://api.github.com/users/Sajaljaiswal";
-const getUser = async () => {
-  const response = await fetch(apiUrl);
-  const data = await response.json();
-  // console.log(data)
-  document.querySelector("#gitName").innerHTML=data.login;
-  document.getElementById("git-bio").innerHTML=data.bio;
-  document.getElementById("gitlocation").innerHTML=data.location;
-  document.getElementById("twitter-link").innerHTML=data.twitter_username;
-  document.getElementById("git-link").innerHTML=data.html_url;
-  // const imageUrl = data.avatar_url;
-  document.querySelector("#avatar-img").innerHTML = `
-  <img id="avatar-img" src="${data.avatar_url}" alt="GitHub Avatar">
-  `;
-};
-getUser();
+// Define the base GitHub API URL
+const apiUrl = "https://api.github.com/users/";
+const getUser = async (username) => {
+  const userApiUrl = apiUrl + username;
+  
+    const response = await fetch(userApiUrl);
+    const data = await response.json();
+    document.querySelector("#gitName").innerHTML = data.login;
+    document.getElementById("git-bio").innerHTML = data.bio;
+    document.getElementById("gitlocation").innerHTML = data.location;
+    document.getElementById("twitter-link").innerHTML = data.twitter_username;
+    document.getElementById("git-link").innerHTML = data.html_url;
+    document.querySelector("#avatar-img").innerHTML = `
+      <img id="avatar-img" src="${data.avatar_url}" alt="GitHub Avatar">
+    `;
+  }
+const username = "ilisha78";
+getUser(username);
+
 
 //here is repos but it display all repos in one page{so that we can know how many total repos does this profile have}
 // const apiUrlRepo = "https://api.github.com/users/Sajaljaiswal/repos";
